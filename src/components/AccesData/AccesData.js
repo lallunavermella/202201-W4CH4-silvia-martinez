@@ -24,15 +24,20 @@ const AccesData = () => {
           />
         </div>
 
-        <div className="form-block ">
-          <button type="submit" className="btn btn-outline-primary ">
-            Previous
-          </button>
-        </div>
-        <div className="form-block align-items-end">
-          <button type="submit" className="btn btn-outline-primary ">
-            Next
-          </button>
+        <div className="from-block btn d-flex">
+          <div className="form-block">
+            <button type="submit" className="btn btn-outline-primary ">
+              Previous
+            </button>
+          </div>
+          <div className="form-block d-flex align-items-end">
+            <button
+              type="submit"
+              className="btn btn-outline-primary d-flex align-items-end"
+            >
+              Acces
+            </button>
+          </div>
         </div>
       </form>
     </>
