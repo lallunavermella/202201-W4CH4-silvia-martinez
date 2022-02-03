@@ -2,26 +2,30 @@ import { useContext } from "react";
 import FormContext from "../../context/FormContext";
 
 const DataUser = () => {
-  const { name } = useContext(FormContext);
+  const { name, lastName, birthdate, email, username, password } =
+    useContext(FormContext);
+
   return (
     <>
       <h2>Data User</h2>
       <form className="form-data flex-column">
         <div className="form-block d-flex align-items-center">
-          <label htmlFor="name">Name: {name} </label>
-          <input type="text" id="name" />
+          <h3> Name: {name} </h3>
         </div>
         <div className="form-block d-flex align-items-center">
-          <label htmlFor="lastName">Last Name: </label>
-          <input type="text" id="lastname" placeholder="Your Last Name" />
+          <h3>Last Name: {lastName} </h3>
         </div>
         <div className="form-block d-flex align-items-center">
-          <label htmlFor="birthdate">Birth Date: </label>
-          <input type="date" id="birthdate" placeholder="Your Birth Day" />
+          <h3>Birth date: {birthdate}</h3>
         </div>
         <div className="form-block d-flex align-items-center">
-          <label htmlFor="email">Email: </label>
-          <input type="url" id="email" placeholder="Enter email" />
+          <h3>Email: {email}</h3>
+        </div>
+        <div className="form-block d-flex align-items-center">
+          <h3>Username: {username}</h3>
+        </div>
+        <div className="form-block d-flex align-items-center">
+          <h3>Password: {password}</h3>
         </div>
         <div className="form-block d-flex align-items-center">
           <button type="submit" className="btn btn-outline-primary ">
