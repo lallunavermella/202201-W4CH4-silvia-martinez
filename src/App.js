@@ -7,6 +7,7 @@ import { useState } from "react";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("PersonalData");
+  setCurrentPage();
   return (
     <div className="App">
       {currentPage === "PersonalData" && <PersonalData />}
