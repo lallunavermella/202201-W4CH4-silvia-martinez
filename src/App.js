@@ -3,11 +3,12 @@ import "./App.css";
 import PersonalData from "./components/PersonalData/PersonalData";
 import Login from "./components/Login/Login";
 import DataUser from "./components/DataUser/DataUser";
-import { useState } from "react";
+import { useContext } from "react";
+import FormContext from "./context/FormContext";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("PersonalData");
-  setCurrentPage();
+  const { currentPage } = useContext(FormContext);
+
   return (
     <div className="App">
       {currentPage === "PersonalData" && <PersonalData />}

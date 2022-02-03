@@ -1,3 +1,5 @@
+import Buttons from "../Buttons/Buttons";
+
 const Login = () => {
   return (
     <>
@@ -22,21 +24,7 @@ const Login = () => {
             Remember password
           </div>
         </div>
-        <div className="from-block btn d-flex">
-          <div className="form-block">
-            <button type="submit" className="btn btn-outline-primary ">
-              Previous
-            </button>
-          </div>
-          <div className="form-block d-flex align-items-end">
-            <button
-              type="submit"
-              className="btn btn-outline-primary d-flex align-items-end"
-            >
-              Acces
-            </button>
-          </div>
-        </div>
+        <Buttons />
       </form>
     </>
   );
