@@ -1,6 +1,12 @@
+import { useState } from "react";
 import FormContext from "./FormContext";
 
 const FormContextProvider = ({ children }) => {
-  return <FormContext.Provider value={""}>{children}</FormContext.Provider>;
+  const [name, setName] = useState("");
+  return (
+    <FormContext.Provider value={{ name, setName }}>
+      {children}
+    </FormContext.Provider>
+  );
 };
 export default FormContextProvider;
