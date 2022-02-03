@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import FormContext from "../../context/FormContext";
+import Buttons from "../Buttons/Buttons";
 
 const AccesData = () => {
-  const [username, setUsername] = useContext(FormContext);
-  const [password, setPassword] = useContext(FormContext);
+  const { username, setUsername } = useContext(FormContext);
+  const { password, setPassword } = useContext(FormContext);
   return (
     <>
       <h2>Username and Password</h2>
@@ -36,22 +37,7 @@ const AccesData = () => {
             placeholder="Please Repeat your Password"
           />
         </div>
-
-        <div className="from-block btn d-flex">
-          <div className="form-block">
-            <button type="submit" className="btn btn-outline-primary ">
-              Previous
-            </button>
-          </div>
-          <div className="form-block d-flex align-items-end">
-            <button
-              type="submit"
-              className="btn btn-outline-primary d-flex align-items-end"
-            >
-              Acces
-            </button>
-          </div>
-        </div>
+        <Buttons />
       </form>
     </>
   );

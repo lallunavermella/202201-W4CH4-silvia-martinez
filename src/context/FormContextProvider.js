@@ -8,6 +8,7 @@ const FormContextProvider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [currentPage, setCurrentPage] = useState("PersonalData");
   return (
     <FormContext.Provider
       value={{
@@ -23,6 +24,8 @@ const FormContextProvider = ({ children }) => {
         setUsername,
         password,
         setPassword,
+        currentPage,
+        setCurrentPage,
       }}
     >
       {children}

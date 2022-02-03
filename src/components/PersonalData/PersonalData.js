@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import FormContext from "../../context/FormContext";
+import Buttons from "../Buttons/Buttons";
 
 const PersonalData = () => {
   const { name, setName } = useContext(FormContext);
@@ -51,11 +52,7 @@ const PersonalData = () => {
             value={email}
           />
         </div>
-        <div className="form-block d-flex align-items-center">
-          <button type="submit" className="btn btn-outline-primary ">
-            Next
-          </button>
-        </div>
+        <Buttons />
       </form>
     </>
   );
