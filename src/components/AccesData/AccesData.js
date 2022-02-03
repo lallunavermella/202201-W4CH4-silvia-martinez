@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import FormContext from "../../context/FormContext";
 import Buttons from "../Buttons/Buttons";
 
 const AccesData = () => {
   const { username, setUsername } = useContext(FormContext);
   const { password, setPassword } = useContext(FormContext);
+  const [repeatPassword, setRepeatPassword] = useState(password);
+
   return (
     <>
       <h2>Username and Password</h2>
@@ -35,7 +37,10 @@ const AccesData = () => {
             type="password"
             id="password"
             placeholder="Please Repeat your Password"
+            value={repeatPassword}
+            onChange={(event) => setRepeatPassword(event.target.value)}
           />
+          {password !== repeatPassword && <span>Different password</span>}
         </div>
         <Buttons />
       </form>
