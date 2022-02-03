@@ -2,7 +2,7 @@ import { useContext } from "react";
 import FormContext from "../../context/FormContext";
 
 const DataUser = () => {
-  const { name, lastName, birthdate, email, username, password } =
+  const { name, lastname, birthday, email, username, password } =
     useContext(FormContext);
 
   return (
@@ -13,10 +13,10 @@ const DataUser = () => {
         <h3> Name: {name} </h3>
       </div>
       <div className="form-block d-flex align-items-center">
-        <h3>Last Name: {lastName} </h3>
+        <h3>Last Name: {lastname} </h3>
       </div>
       <div className="form-block d-flex align-items-center">
-        <h3>Birth date: {birthdate}</h3>
+        <h3>Birth date: {birthday}</h3>
       </div>
       <div className="form-block d-flex align-items-center">
         <h3>Email: {email}</h3>
