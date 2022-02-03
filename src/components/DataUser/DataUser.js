@@ -1,22 +1,15 @@
 import { useContext } from "react";
 import FormContext from "../../context/FormContext";
 
-const PersonalData = () => {
-  const { name, setName } = useContext(FormContext);
-
+const DataUser = () => {
+  const { name } = useContext(FormContext);
   return (
     <>
       <h2>Data User</h2>
       <form className="form-data flex-column">
         <div className="form-block d-flex align-items-center">
-          <label htmlFor="name">Name: </label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            onChange={(event) => setName(event.target.value)}
-            value={name}
-          />
+          <label htmlFor="name">Name: {name} </label>
+          <input type="text" id="name" />
         </div>
         <div className="form-block d-flex align-items-center">
           <label htmlFor="lastName">Last Name: </label>
@@ -39,4 +32,4 @@ const PersonalData = () => {
     </>
   );
 };
-export default PersonalData;
+export default DataUser;
